@@ -19,5 +19,8 @@ jobs:
     - name: Horusec
       uses: fike/horusec-action@v0.2.2
       with:
-          arguments: horusec start -p ./ -s="LOW, MEDIUM, CRITICAL"
+          arguments: docker run -v /var/run/docker.sock:/var/run/docker.sock \
+                     -v $(pwd):/src/horusec \
+                     horuszup/horusec-cli:latest horusec start -p /src/horusec -P $(pwd)
+
 
