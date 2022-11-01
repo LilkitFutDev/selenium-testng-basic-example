@@ -19,5 +19,5 @@ jobs:
     - name: Horusec
       uses: fike/horusec-action@v0.2.2
       with:
-          arguments: horusec start -p ./
+          arguments: horusec start -p ./ -s="LOW, MEDIUM, CRITICAL"
 
