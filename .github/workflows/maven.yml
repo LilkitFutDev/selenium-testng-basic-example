@@ -20,3 +20,4 @@ jobs:
       uses: fike/horusec-action@v0.2.2
       with:
           arguments: horusec start -p ./
+
